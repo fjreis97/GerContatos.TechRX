@@ -1,8 +1,7 @@
-﻿using Core.Interfaces.Services;
-using Core.Dto.Role;
-using Core.Responses;
+﻿using Core.Dto.Role;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using Business.Interfaces.Services;
 
 namespace GerContatos.API.Controllers
 {

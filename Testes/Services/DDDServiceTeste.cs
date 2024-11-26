@@ -1,17 +1,11 @@
 ﻿using AutoMapper;
+using Business.Services;
 using Core.Dto.DDD;
 using Core.Entities;
 using Core.Interfaces.Repositories;
-using Core.Interfaces.Services;
-using Core.Responses;
-using GerContatos.API.Services;
 using Moq;
-using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
-namespace GerContatos.API.Tests
+namespace Testes.Services
 {
     [TestFixture]
     public class DDDServiceTests

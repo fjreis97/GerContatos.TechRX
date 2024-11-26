@@ -1,14 +1,12 @@
-﻿using Core.Interfaces.Services;
-using Core.Entities;
-using Core.Responses;
+﻿using AutoMapper;
+using Business.Dtos.Responses;
+using Business.Interfaces.Services;
 using Core.Dto.Role;
-using AutoMapper;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Core.Interfaces.Repositories;
+using Core.Entities;
 using Core.Enums;
+using Core.Interfaces.Repositories;
 
-namespace GerContatos.API.Services
+namespace Business.Services
 {
     public class RoleService : IRoleService
     {

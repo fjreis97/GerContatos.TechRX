@@ -1,11 +1,7 @@
-﻿using Core.Entities;
-using NUnit.Framework;
-using System.ComponentModel.DataAnnotations;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.ComponentModel.DataAnnotations;
+using Core.Entities;
 
-
-namespace Core.Tests.Entities
+namespace Testes.Entities
 {
 
     [TestFixture]

@@ -1,13 +1,11 @@
 ﻿using AutoMapper;
+using Business.Dtos.Responses;
+using Business.Interfaces.Services;
 using Core.Dto.DDD;
 using Core.Entities;
 using Core.Interfaces.Repositories;
-using Core.Interfaces.Services;
-using Core.Responses;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
-namespace GerContatos.API.Services
+namespace Business.Services
 {
     public class DDDService : IDDDService
     {

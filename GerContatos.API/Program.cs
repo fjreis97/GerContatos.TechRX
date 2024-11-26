@@ -1,4 +1,3 @@
-using Core.Interfaces.Services;
 using Core.Entities;
 using GerContatos.API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -6,13 +5,14 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 using System.Text;
-
+using Business.Interfaces.Services;
 using Core.Interfaces.Repositories;
 using Infrastructure.Repository;
 using Infrastructure.Data;
 using Core;
 using Microsoft.EntityFrameworkCore;
 using Business.Mapping;
+using Business.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,19 +21,19 @@ builder.Services.AddDbContext<AppDbContext>(options =>
            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
-// Configuração de CORS
+// Configuraï¿½ï¿½o de CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins", builder =>
     {
         builder.AllowAnyOrigin()  // Permite qualquer origem
-               .AllowAnyMethod()  // Permite qualquer método (GET, POST, etc.)
-               .AllowAnyHeader(); // Permite qualquer cabeçalho
+               .AllowAnyMethod()  // Permite qualquer mï¿½todo (GET, POST, etc.)
+               .AllowAnyHeader(); // Permite qualquer cabeï¿½alho
     });
 });
 
 
-// Registra os repositórios
+// Registra os repositï¿½rios
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IContatoRepository, ContatoRepository>();
 builder.Services.AddScoped<IDDDRepository, DDDRepository>();
@@ -42,7 +42,7 @@ builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 builder.Services.AddScoped<ITipoTelefoneRepository, TipoTelefoneRepository>();
 builder.Services.AddScoped<IRepository<TipoTelefone>, TipoTelefoneRepository>();
 
-// Registra os serviços
+// Registra os serviï¿½os
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<IContatoService, ContatoService>();
 builder.Services.AddScoped<IDDDService, DDDService>();
@@ -56,6 +56,7 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 // Register AutoMapper specifying the Application assembly
 builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
 
+builder.Services.AddHostedService<CreateContactBackgroundService>();
 
 var key = Encoding.ASCII.GetBytes(builder.Configuration["SecretJWT"]!);
 
@@ -92,7 +93,7 @@ builder.Services.AddSwaggerGen(c =>
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     c.IncludeXmlComments(xmlPath);
 
-    // Definir o esquema de segurança
+    // Definir o esquema de seguranï¿½a
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,
@@ -124,7 +125,7 @@ var app = builder.Build();
 //app.Urls.Add("http://+:5046");
 
 // Habilite o CORS
-app.UseCors("AllowAllOrigins"); // Aplicando a política de CORS
+app.UseCors("AllowAllOrigins"); // Aplicando a polï¿½tica de CORS
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

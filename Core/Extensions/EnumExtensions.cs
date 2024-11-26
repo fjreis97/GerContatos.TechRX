@@ -1,6 +1,4 @@
-﻿using System;
-using System.ComponentModel;
-using System.Reflection;
+﻿namespace Core.Extensions;
 
 public static class EnumExtensions
 {
@@ -9,4 +7,3 @@ public static class EnumExtensions
         return Enum.GetName(typeof(TEnum), enumValue)!;
     }
 }
-

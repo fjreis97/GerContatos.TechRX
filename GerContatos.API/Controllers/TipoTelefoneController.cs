@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Core.Interfaces.Services;
 using Core.Entities;
 using Core.Dto.TipoTelefone;
-using Core.Responses;
 using System.Threading.Tasks;
 using AutoMapper;
+using Business.Interfaces.Services;
 
 namespace GerContatos.API.Controllers
 {

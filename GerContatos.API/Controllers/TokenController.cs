@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
+using Business.Dtos.Request.Token;
+using Business.Interfaces.Services;
 using Core.Entities;
-using Core.Interfaces.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Model.Dtos.Request.Token;
 
 namespace GerContatos.API.Controllers
 {

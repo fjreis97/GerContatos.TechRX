@@ -1,20 +1,19 @@
 ﻿using AutoMapper;
-using Core.Entities;
-using Core.Interfaces.Services;
+using Business.Dtos.Request.Token;
+using Business.Interfaces.Services;
+using Business.Mapping;
+using Business.Services;
+using Core.Dto.Usuarios;
 using GerContatos.API.Controllers;
+using GerContatos.API.Services;
+using Infrastructure.Data;
+using Infrastructure.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Model.Dtos.Request.Token;
-using NUnit.Framework;
-using System.IO;
-using System.Threading.Tasks;
-using Business.Mapping;
-using Core.Dto.Usuarios;
-using GerContatos.API.Services;
-using Infrastructure.Data;
-using Infrastructure.Repository;
+
+namespace Testes.Integracao;
 
 [TestFixture]
 public class UsuarioControllerIntegrationTests

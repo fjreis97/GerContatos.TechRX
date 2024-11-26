@@ -1,10 +1,10 @@
-﻿using Core.Interfaces.Services;
-using Core.Entities;
+﻿using Core.Entities;
 using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Business.Interfaces.Services;
 using Core.Enums;
 
 namespace GerContatos.API.Services;
