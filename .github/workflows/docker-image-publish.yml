@@ -82,7 +82,8 @@ jobs:
 
       - name: Run EF Core Migrations
         run: |
-          dotnet ef database update --project GerContatos.API --connection "Server=localhost,1433;Database=TestDb;User Id=sa;Password=SenhaSegura123!;TrustServerCertificate=True"
+          dotnet ef database update --project GerContatos.API --connection "Server=localhost,1433;Database=TestDb;User Id=sa;Password=SuaSenha123!;TrustServerCertificate=True" --verbose
+
 
       - name: Insert initial data into Papel and Usuario tables
         run: |
