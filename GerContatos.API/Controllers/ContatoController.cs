@@ -3,14 +3,13 @@ using Core.Dto.Contato;
 using Core.Dto.Usuarios;
 using Core.Entities;
 using Core.Enums;
-using Core.Interfaces.Services;
-using Core.Request.Contact;
-using Core.Request.User;
 using GerContatos.API.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using Business.Dtos.Request.Contact;
+using Business.Interfaces.Services;
 
 namespace GerContatos.API.Controllers
 {

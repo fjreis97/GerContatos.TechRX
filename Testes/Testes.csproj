@@ -29,7 +29,6 @@
     <ProjectReference Include="..\Core\Core.csproj" />
     <ProjectReference Include="..\GerContatos.API\GerContatos.API.csproj" />
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
-    <ProjectReference Include="..\Model\Model.csproj" />
   </ItemGroup>
 
   <ItemGroup>

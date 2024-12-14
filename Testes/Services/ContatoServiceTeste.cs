@@ -3,13 +3,14 @@ using Core.Dto.Contato;
 using Core.Dto.DDD;
 using Core.Entities;
 using Core.Interfaces.Repositories;
-using Core.Interfaces.Services;
-using Core.Responses;
 using GerContatos.API.Services;
 using Moq;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Business.Dtos.Responses;
+using Business.Interfaces.Services;
+using Business.Services;
 
 namespace Testes.Services
 {

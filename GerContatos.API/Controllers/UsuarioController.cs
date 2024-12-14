@@ -1,10 +1,10 @@
 ﻿using Core.Entities;
-using Model.Enums;
-using Core.Interfaces.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
-using Core.Request.User;
+using Business.Dtos.Request.User;
+using Business.Enums;
+using Business.Interfaces.Services;
 using Core.Dto.Usuarios;
 
 namespace GerContatos.API.Controllers

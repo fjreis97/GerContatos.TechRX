@@ -1,14 +1,12 @@
-﻿using Core.Interfaces.Services;
-using Core.Entities;
-using Core.Responses;
+﻿using AutoMapper;
+using Business.Dtos.Responses;
+using Business.Interfaces.Services;
 using Core.Dto.TipoTelefone;
-using AutoMapper;
+using Core.Entities;
 using Core.Enums;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Core.Interfaces.Repositories;
 
-namespace GerContatos.API.Services
+namespace Business.Services
 {
     public class TipoTelefoneService : ITipoTelefoneService
     {

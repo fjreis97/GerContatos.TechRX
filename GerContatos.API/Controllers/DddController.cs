@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using Core.Dto.DDD;
 using Core.Entities;
-using Core.Interfaces.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Business.Interfaces.Services;
 
 namespace GerContatos.API.Controllers
 {

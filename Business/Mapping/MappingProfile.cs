@@ -6,16 +6,15 @@ using Core.Dto.Role;
 using Core.Dto.TipoTelefone;
 using Core.Dto.Usuarios;
 using Core.Entities;
-using Core.Request.Contact;
-using Core.Request.Region;
-using Core.Request.User;
-using Model.Dtos.Request.Token;
-using Model.Dtos.Request.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Business.Dtos.Request.Contact;
+using Business.Dtos.Request.Region;
+using Business.Dtos.Request.Token;
+using Business.Dtos.Request.User;
 
 namespace Business.Mapping;
 

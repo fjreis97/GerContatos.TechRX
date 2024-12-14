@@ -1,13 +1,11 @@
-﻿using Core.Interfaces.Services;
+﻿using AutoMapper;
+using Business.Dtos.Responses;
+using Business.Interfaces.Services;
+using Core.Dto.Usuarios;
 using Core.Entities;
 using Core.Interfaces.Repositories;
-using Core.Responses;
-using Core.Request.User;
-using Core.Dto.Usuarios;
-using AutoMapper;
-using Core.Dto.Role;
 
-namespace GerContatos.API.Services
+namespace Business.Services
 {
     public class UsuarioService(IUsuarioRepository _usuarioRepository, IMapper _mapper) : IUsuarioService
     {
