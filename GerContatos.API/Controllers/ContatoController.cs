@@ -18,7 +18,7 @@ namespace GerContatos.API.Controllers
     public class ContatoController(IContatoService _contatoService, IMapper _mapper, IDDDService _dddService) : ControllerBase
     {
         [HttpPost]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> Create([FromBody] CreateContactRequest createContatoDto)
         {
             try
@@ -40,7 +40,7 @@ namespace GerContatos.API.Controllers
         }
 
         [HttpGet("{id}")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> GetById(int id)
         {
             
